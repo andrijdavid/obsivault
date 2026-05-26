@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "obsivault"
+version = "0.1.0"
+description = "Convert AI chat exports (Claude, Grok, Gemini) into an Obsidian-friendly Markdown vault."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "AGPL-3.0-or-later" }
+authors = [{ name = "andrijdavid" }]
+keywords = ["obsidian", "markdown", "claude", "grok", "gemini", "export"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+dependencies = [
+    "typer>=0.12",
+    "pydantic>=2.6",
+    "ijson>=3.2",
+    "python-slugify>=8",
+    "rich>=13",
+    "pyyaml>=6",
+    "beautifulsoup4>=4.12",
+    "markdownify>=0.11",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=5",
+    "ruff>=0.5",
+    "mypy>=1.10",
+    "types-PyYAML",
+]
+
+[project.scripts]
+obsivault = "obsivault.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/andrijdavid/obsivault"
+Issues = "https://github.com/andrijdavid/obsivault/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/obsivault"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF", "N", "PL"]
+ignore = ["PLR0911", "PLR0913", "PLR2004"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+files = ["src/obsivault"]
+
+[[tool.mypy.overrides]]
+module = "obsivault.core.*"
+strict = true
