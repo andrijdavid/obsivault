@@ -5,12 +5,12 @@ build-backend = "hatchling.build"
 [project]
 name = "obsivault"
 version = "0.1.0"
-description = "Convert AI chat exports (Claude, Grok, Gemini) into an Obsidian-friendly Markdown vault."
+description = "Convert AI chat exports (Claude, Grok, ChatGPT, Gemini) into an Obsidian-friendly Markdown vault."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "AGPL-3.0-or-later" }
 authors = [{ name = "andrijdavid" }]
-keywords = ["obsidian", "markdown", "claude", "grok", "gemini", "export"]
+keywords = ["obsidian", "markdown", "claude", "grok", "chatgpt", "gemini", "export"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Environment :: Console",

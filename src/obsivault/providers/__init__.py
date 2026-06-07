@@ -1,4 +1,5 @@
 from obsivault.providers import (
+    chatgpt,
     claude,
     claude_code,
     codex,
@@ -9,6 +10,7 @@ from obsivault.providers import (
 )
 
 __all__ = [
+    "chatgpt",
     "claude",
     "claude_code",
     "codex",

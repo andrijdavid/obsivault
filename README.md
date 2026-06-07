@@ -8,6 +8,7 @@ Supported sources (v0.1):
 
 - **Claude** (Settings -> Privacy -> Export). Reads `conversations.json`.
 - **Grok** (Settings -> Data controls -> Export). Reads `prod-grok-backend.json`.
+- **ChatGPT** (Settings -> Data controls -> Export). Reads the `conversations.json` tree.
 - **Gemini** via Google Takeout (My Activity -> Gemini Apps and Gemini in
   Workspace). Reads the Workspace transcripts and, optionally, NotebookLM.
 
