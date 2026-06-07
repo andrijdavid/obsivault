@@ -51,6 +51,15 @@ Issues = "https://github.com/andrijdavid/obsivault/issues"
 [tool.hatch.build.targets.wheel]
 packages = ["src/obsivault"]
 
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/obsivault",
+    "tests",
+    "README.md",
+    "pyproject.toml",
+    "uv.lock",
+]
+
 [tool.ruff]
 line-length = 100
 target-version = "py311"
