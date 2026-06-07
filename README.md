@@ -14,6 +14,20 @@ Supported sources (v0.1):
 
 ## Install
 
+From PyPI:
+
+```sh
+pip install obsivault
+```
+
+Or with uv:
+
+```sh
+uv tool install obsivault
+```
+
+From source (for development):
+
 ```sh
 uv sync
 ```
