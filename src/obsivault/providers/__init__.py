@@ -1,3 +1,3 @@
-from obsivault.providers import claude, gemini, grok
+from obsivault.providers import claude, codex, gemini, grok
 
-__all__ = ["claude", "gemini", "grok"]
+__all__ = ["claude", "codex", "gemini", "grok"]
