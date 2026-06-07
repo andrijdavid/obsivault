@@ -86,6 +86,7 @@ class VaultWriter:
             dest = dest_dir / a.filename
             if dest.exists() and dest.stat().st_size == a.source_path.stat().st_size:
                 continue
+            dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(a.source_path, dest)
             count += 1
         return count
